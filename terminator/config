@@ -1,0 +1,25 @@
+[global_config]
+  geometry_hinting = True
+  scroll_tabbar = True
+  always_on_top = True
+  title_hide_sizetext = True
+  inactive_color_offset = 0.8074866310160428
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    autoclean_groups = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
