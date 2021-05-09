@@ -1,14 +1,7 @@
 # dotfiles
 
-Dotfiles adalah kumpulan pengaturan sistem linux saya. 
+Here is files that you put in /home/username folder 
+- .vimrc
+- .Xinitrc 
 
-Ini adalah preferensi pribadi yang berjalan di komputer pribadi.
-
-Kebanyakan pengaturan disimpan di dalam folder ~/.config
-
-namun ada juga yang langsung disimpan di /home/username/
-
-## Vimrc
-put this file on ~/.vimrc
-
-##
+Except those files, put inside ~/.config/
