@@ -14,6 +14,7 @@ set shiftwidth=4
 set smartindent
 set tabstop=4 softtabstop=4
 set termguicolors
+syntax  on
 
 set laststatus=2
 set t_Co=256
