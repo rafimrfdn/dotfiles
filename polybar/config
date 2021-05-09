@@ -52,13 +52,16 @@ module-margin-left = 1
 module-margin-right = 2
 
 ;font-0 = fixed:pixelsize=10;1
-font-0 = SFProDisplay:pixelsize=12
+font-0 = SFProDisplay:weight=bold:pixelsize=12
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = xbacklight pulseaudio memory cpu battery temperature date powermenu 
+modules-right = xbacklight pulseaudio battery temperature date powermenu 
+
+;add this to modules-right show these modules
+;memory cpu
 
 ;separator = |
 
@@ -303,22 +306,24 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
-format-spacing = 1
+format-spacing = 3 
 
-label-open = 
+label-open =   power 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close =   cancel
 label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
+;label-separator = |
+;label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
-menu-0-0-exec = reboot 
+menu-0-0-exec = loginctl reboot 
 menu-0-1 = power off
-menu-0-1-exec = sudo poweroff
+menu-0-1-exec = loginctl poweroff
 
+
+ 
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -331,4 +336,4 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-;vim=
+; vim:ft=dosini
