@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sstatus=$(xrandr --listactivemonitors | grep "Monitors" | awk '{print $2}')
+
+if [ "$sstatus" -eq 1 ]; then
+    text="Single"
+    icon=""
+else
+    text="Dual"
+    icon=""
+fi
+
+printf "%s\n" "$icon "
