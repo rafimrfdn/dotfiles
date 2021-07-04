@@ -39,7 +39,7 @@ copyq &
 
 while true;do
     nm-applet & 
-    dbus-launch dwm >/dev/null 2>&1
+    dwm >/dev/null 2>&1
 done  
 
-exec dbus-launch dwm 
+exec dwm 
