@@ -3,7 +3,7 @@
 // border pixel of windows
 static const unsigned int borderpx  = 1;
 // gaps between windows 
-static const unsigned int gappx = 10;
+static const unsigned int gappx = 42;
 // snap pixel 
 static const unsigned int snap = 32;
 // 0: sloppy systray follows selected monitor, >0: pin systray to monitor X 
@@ -21,8 +21,8 @@ static const int topbar = 1;
 
 // ---------------------------------- Fonts ------------------------------------
 
-static const char *fonts[] = { "SF Pro Display:style=Medium:size=11", "Font Awesome 5 Free Solid:size=10" };
-static const char dmenufont[] = "SF Pro Display:size=11";
+static const char *fonts[] = { "SF Pro Display:style=Medium:size=10", "Font Awesome 5 Free Solid:size=10" };
+static const char dmenufont[] = "SF Pro Display:style=Medium:size=10";
 
 // ---------------------------------- Colors -----------------------------------
 
@@ -95,6 +95,7 @@ static const Rule rules[] = {
 
     // class      instance    title       tags mask     isfloating   monitor 
     { "Gimp",     NULL,       NULL,       0,            1,           -1 },
+    { "feh",      NULL,       NULL,       0,            1,           -1 },
     { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -133,7 +134,7 @@ static const char *powermenu[] = { "/home/artix/.scripts/powermenu.sh", NULL };
 
 // Commands
 static char dmenumon[2] = "0";
-static const char *termcmd[]  = { "terminator", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *dmenucmd[] = {
     "dmenu_run", "-m", dmenumon,
     "-fn", dmenufont,
@@ -222,27 +223,28 @@ static Key keys[] = {
     { MODKEY, XK_d, spawn, SHCMD("rofi -show drun") },
 
     // note
-    { MODKEY, XK_n, spawn, SHCMD("terminator -e ~/.scripts/notetaker.sh") },
+    { MODKEY, XK_n, spawn, SHCMD("st -e ~/.scripts/notetaker.sh") },
 
     // Window nav (rofi)
     { MODKEY|ShiftMask, XK_d, spawn, SHCMD("rofi -show") },
 
     // Terminal
-    { MODKEY|ShiftMask, XK_Return, spawn, SHCMD("terminator") },
+    { MODKEY|ShiftMask, XK_Return, spawn, SHCMD("st") },
 
     // File explorer
-    { MODKEY, XK_e, spawn, SHCMD("pcmanfm") },
+    { MODKEY, XK_e, spawn, SHCMD("nemo") },
 
     // Browser
-    { MODKEY, XK_w, spawn, SHCMD("chromium") },
+    { MODKEY, XK_w, spawn, SHCMD("firefox") },
 
     // Redshift
     { MODKEY, XK_r, spawn, SHCMD("redshift -O 2400") },
     { MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
 
     // Screenshot
-   	{ 0, XK_Print,  spawn, SHCMD("flameshot & flameshot full -p ~/Pictures/") },
-   	{ 0|ShiftMask, XK_Print,  spawn, SHCMD("flameshot gui") },
+   	{ 0, XK_Print,  spawn, SHCMD("scrot 'scrot_%Y-%m-%d_%X.jpg' -e 'mv $f ~/Pictures/'") },
+   	{ 0|ShiftMask, XK_Print,  spawn, SHCMD("scrot -s 'scrot_%Y-%m-%d_%X.jpg' -e 'mv $f ~/Pictures/'") },
+   	{ 0|ControlMask, XK_Print,  spawn, SHCMD("scrot -u 'scrot_%Y-%m-%d_%X.jpg' -e 'mv $f ~/Pictures/'") },
 
     // Background 
   	{ MODKEY, XK_z,      spawn,	       SHCMD("feh --bg-scale --randomize ~/Pictures/wp/*") },
