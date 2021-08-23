@@ -1,37 +1,11 @@
 #!/bin/sh
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
-
-# merge in defaults and keymaps
-
-if [ -f $sysresources ]; then
-
-    xrdb -merge $sysresources
-
-fi
-
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
-
-if [ -f "$userresources" ]; then
-
-    xrdb -merge "$userresources"
-
-fi
-
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
-
-# magic starts here
-
 export PATH=$HOME/.local/bin:$PATH
 
-#slstatus &
+case $( basename "$( tty )" ) in 
+#set DE for tty1
+               tty1) 
+/home/artix/.screenlayout/externalmonitor.sh &
 dwmblocks &
 feh --bg-scale --randomize ~/Pictures/wp/* &
 picom --config /home/artix/Programs/antoniosarosi/picom.conf & 
@@ -42,4 +16,12 @@ while true;do
     dwm >/dev/null 2>&1
 done  
 
-exec dwm 
+#exec dbus-launch dwm 
+#exec dwm 
+dwm
+;;
+
+#set DE for tty2 
+#           tty2) 
+#                   exec cutefish-session 
+esac
