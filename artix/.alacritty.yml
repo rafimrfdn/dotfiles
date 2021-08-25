@@ -1,0 +1,47 @@
+# Opacity
+background_opacity: .8
+
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#FFFFFF'
+
+  # Default colors
+  normal:
+    black:   '#0b141a'
+    red:     '#FF0045'
+    green:   '#9AFF00'
+    yellow:  '#FFEB00'
+    blue:    '#48A4FD'
+    magenta: '#D62DFF'
+    cyan:    '#00D0FF'
+    white:   '#DCF9FF'
+
+  # Bright colors
+  bright:
+    black:   '#18252D'
+    red:     '#FF2888'
+    green:   '#BFFF5D'
+    yellow:  '#FFF253'
+    blue:    '#67C4FF'
+    magenta: '#CD6DFF'
+    cyan:    '#4ADEFF'
+    white:   '#FFFFFF'
+
+font:
+  normal:
+    family: 'JetBrains Mono'
+    style: Regular
+
+  bold:
+    family: 'JetBrains Mono'
+    style: Bold
+
+  italic:
+    family: 'JetBrains Mono'
+    style: Italic
+
+  # Point size of the font
+  size: 11.5
+
