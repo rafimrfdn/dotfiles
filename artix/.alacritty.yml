@@ -1,47 +1,72 @@
-# Opacity
-background_opacity: .8
+env:
+  TERM: xterm-256color
 
-colors:
-  # Default colors
-  primary:
-    background: '#000000'
-    foreground: '#FFFFFF'
+window:
+  dimensions:
+    columns: 110
+    lines: 33
 
-  # Default colors
-  normal:
-    black:   '#0b141a'
-    red:     '#FF0045'
-    green:   '#9AFF00'
-    yellow:  '#FFEB00'
-    blue:    '#48A4FD'
-    magenta: '#D62DFF'
-    cyan:    '#00D0FF'
-    white:   '#DCF9FF'
+  padding:
+    x: 0
+    y: 0
 
-  # Bright colors
-  bright:
-    black:   '#18252D'
-    red:     '#FF2888'
-    green:   '#BFFF5D'
-    yellow:  '#FFF253'
-    blue:    '#67C4FF'
-    magenta: '#CD6DFF'
-    cyan:    '#4ADEFF'
-    white:   '#FFFFFF'
+
+background_opacity: 0.80
+
+dpi:
+  x: 128.0
+  y: 128.0
+  
+draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: 'JetBrains Mono'
+    family: JetBrains Mono
     style: Regular
-
   bold:
-    family: 'JetBrains Mono'
+    family: JetBrains Mono 
     style: Bold
-
   italic:
-    family: 'JetBrains Mono'
+    family: JetBrains Mono 
     style: Italic
-
-  # Point size of the font
   size: 11.5
 
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+colors:
+# Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xe6e6dc'
+      
+# Normal colors
+  normal:
+    black:   '0x00384d'
+    red:     '0xc43061'
+    green:   '0x7fc06e'
+    yellow:  '0xf08e48'
+    blue:    '0x1c8db2'
+    magenta: '0xc694ff'
+    cyan:    '0x00cccc'
+    white:   '0x77929e'
+  
+# Bright colors
+  bright:
+    black:   '0x517f8d'
+    red:     '0xff5a67'
+    green:   '0x9cf087'
+    yellow:  '0xffcc1b'
+    blue:    '0x7eb2dd'
+    magenta: '0xfb94ff'
+    cyan:    '0x00ffff'
+    white:   '0xb7cff9'
+  
+  cursor:
+    text: "0x002635"
+    cursor: "0xffcc1b"
