@@ -17,3 +17,8 @@ You can also disable GDM (Gnome Display Manager) to get extra light Gnome-shell,
 
 1. Disable gdm `systemctl disable gdm`
 2. Edit `.zprofile` file, then add `exec dbus-run-session gnome-shell --wayland` to inside line tty2 to run Gnome+wayland without GDM.
+
+## Preview
+
+![](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/fedora-gnome-minimalist-mrfdn.png)
+![](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/gnome-fedora-minimalist-jagotekno.png)
