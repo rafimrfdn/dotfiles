@@ -1,0 +1,41 @@
+[Added Associations]
+video/x-matroska=mpv.desktop;
+x-scheme-handler/http=org.gnome.Epiphany.desktop;firefox.desktop;
+x-scheme-handler/https=org.gnome.Epiphany.desktop;firefox.desktop;
+text/html=org.gnome.Epiphany.desktop;firefox.desktop;
+application/xhtml+xml=org.gnome.Epiphany.desktop;firefox.desktop;
+application/x-shellscript=org.gnome.gedit.desktop;
+image/png=userapp-feh-L6A730.desktop;feh.desktop;
+application/x-desktop=pcmanfm-desktop-pref.desktop;
+image/jpeg=feh.desktop;
+text/plain=vim.desktop;
+application/x-executable=terminator.desktop;
+application/pdf=wps-office-pdf.desktop;wps-office-prometheus.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+inode/directory=code-oss.desktop;
+
+[Default Applications]
+x-scheme-handler/http=microsoft-edge.desktop
+x-scheme-handler/https=microsoft-edge.desktop
+text/html=microsoft-edge.desktop
+application/xhtml+xml=firefox.desktop
+x-scheme-handler/about=microsoft-edge.desktop
+x-scheme-handler/unknown=microsoft-edge.desktop
+image/png=feh.desktop
+image/jpeg=feh.desktop
+text/plain=vim.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+inode/directory=pcmanfm.desktop;   
+
+[Removed Associations]
+inode/directory=code-oss.desktop
