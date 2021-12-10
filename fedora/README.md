@@ -13,7 +13,7 @@ No more bloat software from Gnome. But you can still run Gnome on Wayland.
 7. Install nvim then put my `init.vim` configuration
 8. Install additional apps `dnf install pasystray pcmanfm kitty feh scrot polkit-gnome lxappearance gnome-tweaks pcmanfm shotwell`
 
-You can also disable GDM (Gnome Display Manager) to get extra light Gnome-shell, but you cannot get the full Gnome experience, just the desktop.
+You can also disable GDM (Gnome Display Manager) to get extra light Gnome-shell, but you cannot get the full Gnome experience (like screenshot, shortcuts, etc), just the desktop.
 
 1. Disable gdm `systemctl disable gdm`
 2. Edit `.zprofile` file, then add `exec dbus-run-session gnome-shell --wayland` to inside line tty2 to run Gnome+wayland without GDM.
