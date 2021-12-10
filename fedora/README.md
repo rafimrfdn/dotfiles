@@ -20,5 +20,6 @@ You can also disable GDM (Gnome Display Manager) to get extra light Gnome-shell,
 
 ## Preview
 
-![](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/fedora-gnome-minimalist-mrfdn.png)
-![](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/gnome-fedora-minimalist-jagotekno.png)
+![Gnome Minimalist Fedora](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/fedora-gnome-minimalist-mrfdn.png)
+![Fedora run Gnome Minimalist no bloat](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/gnome-fedora-minimalist-jagotekno.png)
+![DWM on Fedora](https://github.com/rafimrfdn/dotfiles/blob/main/fedora/DWM-on-fedora-workstation.png)
