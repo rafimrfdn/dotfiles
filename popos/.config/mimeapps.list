@@ -1,0 +1,29 @@
+[Default Applications]
+text/x-reject=nvim.desktop
+inode/directory=pcmanfm.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-B8H2A1.desktop
+application/pdf=chromium.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+image/png=feh.desktop
+application/zip=xarchiver.desktop
+text/markdown=nvim.desktop
+text/plain=nvim.desktop
+video/x-matroska=mpv.desktop
+image/jpeg=feh.desktop
+
+[Added Associations]
+text/x-reject=nvim.desktop;
+image/png=userapp-feh-31RLA1.desktop;feh.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-B8H2A1.desktop;
+application/pdf=chromium.desktop;
+application/zip=xarchiver.desktop;
+text/markdown=nvim.desktop;
+text/plain=nvim.desktop;
+video/x-matroska=org.gnome.Totem.desktop;mpv.desktop;
+image/jpeg=feh.desktop;
+
+[Removed Associations]
