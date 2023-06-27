@@ -1,9 +1,13 @@
 # dotfiles
 
-Here is files that you put in /home/username folder 
-- .vimrc
-- .Xinitrc 
+Hello, when I install linux many years ago, I never save my configuration.
 
-Except those files, put inside ~/.config/
+It makes me hard to create a new configuration over and over again.
 
-> Please select branch for every distro I've created the dotfiles configuration.
+But now I know how to save my system configuration for every distro I've tested by store it on Github.
+
+So here is my dotfiles repo. 
+
+I put every important dotfiles of my `/home/` folder here.
+
+Please select branch based on the distro name.
