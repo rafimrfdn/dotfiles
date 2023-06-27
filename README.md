@@ -1,9 +1,10 @@
-# dotfiles
+# This is my Debian dotfiles
 
-Here is files that you put in /home/username folder 
-- .vimrc
-- .Xinitrc 
+I include some `.config` of my Debian SID installation.
 
-Except those files, put inside ~/.config/
+I prefer this config works well with [my DWM](https://github.com/rafimrfdn/dwm-debian) configuration.
 
-> Please select branch for every distro I've created the dotfiles configuration.
+## Font that I use
+
+- JetBrains Mono
+- SF Pro Display Medium
