@@ -1,42 +1,27 @@
-    case $( basename "$( tty )" ) in 
-        tty1) 
-                # Start WM 1 
+#!/bin/sh
 
-#xrandr arandr 
-xrandr --output LVDS1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output DP3 --off --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VGA1 --off --output VIRTUAL1 --off & 
+export PATH=$HOME/.local/bin:$PATH
 
-# compositor
-#picom -f &
-compton --config /home/void/.config/compton.conf -b &
+case $( basename "$( tty )" ) in 
+#set DE for tty1
+               tty1) 
+/home/artix/.screenlayout/externalmonitor.sh &
+dwmblocks &
+feh --bg-scale --randomize ~/Pictures/wp/* &
+picom --config /home/artix/Programs/antoniosarosi/picom.conf & 
+copyq &
 
-# wallpaper
-~/.fehbg &
-#nitrogen --restore &
-
-#slstatus &
-#dwm
-while xsetroot -name "Hello Raf today is `date`" 
-    do
-    	sleep 1
-    done &
-
-# loop restart dwm without exit
 while true;do
+    nm-applet & 
     dwm >/dev/null 2>&1
-done
+done  
 
-#execute dwm
-#exec dwm
-                exec dwm 
+#exec dbus-launch dwm 
+#exec dwm 
+dwm
+;;
 
-            ;; 
-
-            tty2) 
-
-                # Start WM 2 
-
-                exec gnome-session 
-
-            ;; 
-
-        esac 
+#set DE for tty2 
+#           tty2) 
+#                   exec cutefish-session 
+esac
