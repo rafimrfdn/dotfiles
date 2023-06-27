@@ -1,42 +1,62 @@
-    case $( basename "$( tty )" ) in 
-        tty1) 
-                # Start WM 1 
+#!/bin/sh
 
-#xrandr arandr 
-xrandr --output LVDS1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output DP3 --off --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VGA1 --off --output VIRTUAL1 --off & 
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
 
-# compositor
-#picom -f &
-compton --config /home/void/.config/compton.conf -b &
+# merge in defaults and keymaps
 
-# wallpaper
-~/.fehbg &
-#nitrogen --restore &
+if [ -f $sysresources ]; then
 
-#slstatus &
-#dwm
-while xsetroot -name "Hello Raf today is `date`" 
-    do
-    	sleep 1
-    done &
 
-# loop restart dwm without exit
-while true;do
-    dwm >/dev/null 2>&1
-done
 
-#execute dwm
-#exec dwm
-                exec dwm 
 
-            ;; 
 
-            tty2) 
 
-                # Start WM 2 
 
-                exec gnome-session 
+    xrdb -merge $sysresources
 
-            ;; 
+fi
 
-        esac 
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f "$userresources" ]; then
+
+
+
+
+
+
+
+    xrdb -merge "$userresources"
+
+fi
+
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
+
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+#twm &
+#xclock -geometry 50x50-1+1 &
+#xterm -geometry 80x50+494+51 &
+#xterm -geometry 80x20+494-0 &
+#exec xterm -geometry 80x66+0+0 -name login
+
+xset r rate 300 50 &
+xset mouse 5 1 &
+picom &
+feh --bg-fill --randomize ~/Pictures/wp/* &
+
+awesome
