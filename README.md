@@ -1,7 +1,5 @@
-# dotfiles
+# My Kali Linux dotfiles 
 
-Here is files that you put in /home/username folder 
-- .vimrc
-- .Xinitrc 
+Feel free to copy and paste my config file.
 
-Except those files, put inside ~/.config/
+Read full configuration on [https://jagotekno.com/install-kali-linux/](https://jagotekno.com/install-kali-linux/)

@@ -1,23 +1,30 @@
 window:
-  decorations: none 
+  decorations: full 
   opacity: 0.90
 font:
   normal:
-    family: Iosevka 
+    #    family: Iosevka Term
+    #family: Iosevka
+    family: CaskaydiaCove Nerd Font
+    #family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: Iosevka 
+    #family: Iosevka 
+    #family: FiraCode Nerd Font Bold
     style: Bold
   italic:
-    family: Iosevka 
+    family: CaskaydiaCove Nerd Font
+    #family: Iosevka 
     style: Italic
   bold_italic:
     family: Iosevka 
     style: Bold Italic
-  size: 9.0
+  size: 8.0
   offset:
     x: 0
-    y: -3
+    y: -2 
+    #y: 0 
   glyph_offset:
     x: 0
-    y: 0
+    y: -1
+    #y: 0 
