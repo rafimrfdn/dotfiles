@@ -1,7 +1,9 @@
-# dotfiles
+# My POPOS dotfiles configuration
 
-Here is files that you put in /home/username folder 
-- .vimrc
-- .Xinitrc 
+hello everyone, here is my dotfiles configuration on PopOS.
 
-Except those files, put inside ~/.config/
+Feel free to copy and paste my configuration.
+
+Use this repo when using my [DWM config](https://github.com/rafimrfdn/dwm-popos/)
+
+Build with PopOS LTS 20.04 with kernel 5.4

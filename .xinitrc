@@ -1,42 +1,17 @@
-    case $( basename "$( tty )" ) in 
-        tty1) 
-                # Start WM 1 
+#!/bin/sh
 
-#xrandr arandr 
-xrandr --output LVDS1 --off --output DP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP2 --off --output DP3 --off --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VGA1 --off --output VIRTUAL1 --off & 
-
-# compositor
-#picom -f &
-compton --config /home/void/.config/compton.conf -b &
-
-# wallpaper
-~/.fehbg &
-#nitrogen --restore &
-
-#slstatus &
-#dwm
-while xsetroot -name "Hello Raf today is `date`" 
-    do
-    	sleep 1
-    done &
-
-# loop restart dwm without exit
-while true;do
+xset r rate 300 50 &
+xset mouse 5 1 &
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &
+xrandr --output LVDS-1 --brightness 0.9 &
+feh --bg-fill --randomize ~/Pictures/wp/* &
+#conky -b &
+#picom &
+# the LTS Version of PopOS (20.04) using old kernel (5.4) only available compton
+compton &
+copyq &
+while true; do
+    nm-applet &
     dwm >/dev/null 2>&1
 done
-
-#execute dwm
-#exec dwm
-                exec dwm 
-
-            ;; 
-
-            tty2) 
-
-                # Start WM 2 
-
-                exec gnome-session 
-
-            ;; 
-
-        esac 
+exec dwm
