@@ -48,7 +48,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.init("/home/rafi/.config/awesome/theme.lua")
+beautiful.init("/home/arch/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 --terminal = "st -f 'Iosevka Nerd Font:size=12'"
@@ -114,9 +114,9 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock("  %d/%m/%y %I:%M %p ")
 
-myuptime = awful.widget.watch('bash -c "sh /home/rafi/.config/awesome/script/uptime.sh "' )
+myuptime = awful.widget.watch('bash -c "sh /home/arch/.config/awesome/script/uptime.sh "' )
 
-mymemoryfree = awful.widget.watch('bash -c "sh /home/rafi/.config/awesome/script/memoryfree.sh "' )
+mymemoryfree = awful.widget.watch('bash -c "sh /home/arch/.config/awesome/script/memoryfree.sh "' )
 
 mybatteryperc = awful.widget.watch('bash -c "cat /sys/class/power_supply/BAT0/capacity"')
 
