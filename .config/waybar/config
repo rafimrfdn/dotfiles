@@ -113,7 +113,6 @@
       "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
       "tooltip": false
     },
-    "height": 10,
     "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
@@ -146,20 +145,22 @@
         "warning": 85
       }
     },
-    "modules-center": [],
-    "modules-left": [
-      "custom/launcher",
-      "hyprland/workspaces",
-      "sway/workspaces",
-      "sway/window"
-    ],
-    "modules-right": [
+    "modules-center": [
       "pulseaudio",
       "backlight",
       "memory",
       "cpu",
       "custom/uptime",
       "temperature",
+      "battery",
+    ],
+    "modules-left": [
+      "custom/launcher",
+      "sway/workspaces",
+      "niri/workspaces",
+      "sway/window",
+    ],
+    "modules-right": [
       "clock",
       "tray",
       "custom/powermenu"
