@@ -33,10 +33,33 @@ reference [https://github.com/silentz/arch-linux-install-guide](https://github.c
 $ sudo pacman -S xorg xorg-apps xorg-xinit xorg-xlsfonts xdotool xclip xsel dbus intel-ucode fuse2 lshw powertop inxi acpi base-devel git bash-completion iw wpa_supplicant wget rsync mesa vulkan-intel brightnessctl neofetch
 ```
 
-## window manager (sway)
+## install AUR
 
 ```sh
-$ pacman -S sway waybar swaybg grim slurp wl-clipboard wofi mako jq 
+$ pacman -S --needed git base-devel
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si
+```
+
+usage
+
+```sh
+$ yay -S ttf-ms-fonts swayfx
+```
+
+## window manager (sway)
+
+Recommended to install sway from AUR (yay). Swayfx has better handling and effect than sway original.
+
+```sh
+$ yay -S swayfx
+```
+
+Then install the rest package of what sway needed.
+
+```sh
+$ pacman -S waybar swaybg grim slurp wl-clipboard wofi mako jq 
 ```
 
 ## fonts
@@ -92,18 +115,3 @@ $ sudo pacman -S capitaine-cursors papirus-icon-theme
 $ sudo pacman -S neovim fd ripgrep tree-sitter tree-sitter-cli nemo file-roller ffmpegthumbnailer mpv zip unzip tree chromium telegram-desktop starship gimp inkscape gparted nodejs npm pnpm hugo  sqlite3 tldr tmux apache lua udisks2 gvfs xdg-user-dirs kitty network-manager-applet nwg-look eog sqlitebrowser pdfarranger 
 ```
 
-
-## install AUR
-
-```sh
-$ pacman -S --needed git base-devel
-$ git clone https://aur.archlinux.org/yay.git
-$ cd yay
-$ makepkg -si
-```
-
-usage
-
-```sh
-$ yay -S ttf-ms-fonts
-```
