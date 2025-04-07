@@ -259,8 +259,9 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
+spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
-spawn-at-startup "bash" "-c" "swaybg -i ~/Pictures/wp/1.jpg"
+// spawn-at-startup "bash" "-c" "swaybg -i ~/Pictures/wp/1.jpg"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -352,6 +353,8 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+D { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
+    Mod+Z { spawn "bash" "-c" "~/.scripts/setrandombg.sh" ; }
+
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

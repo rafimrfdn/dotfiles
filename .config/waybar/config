@@ -87,19 +87,19 @@
     },
     "custom/launcher": {
       "format": "󰣇 ",
-      "on-click": "pkill wofi || wofi --show drun -I || pkill wofi",
+      "on-click": "fuzzel",
       "tooltip": false
     },
-    /*"custom/powermenu": {
+    "custom/powermenu": {
       "format": "",
       "on-click": "pkill wlogout || wlogout",
       "tooltip": false
-    },*/
-    "custom/powermenu": {
+    },
+    /*"custom/powermenu": {
         "format": "",
         "tooltip-format": "power manager",
         "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown' 'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Hibernate' 'systemctl hibernate' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33"
-    },
+    },*/
     "custom/uptime": {
       "exec": "uptime | awk '{print $3 }' | sed 's/,/ /'",
       "format": "󱎴  {}",

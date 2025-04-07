@@ -30,7 +30,7 @@ reference [https://github.com/silentz/arch-linux-install-guide](https://github.c
 ## important apps
 
 ```sh
-$ sudo pacman -S xorg xorg-apps xorg-xinit xorg-xlsfonts xdotool xclip xsel dbus intel-ucode fuse2 lshw powertop inxi acpi base-devel git bash-completion iw wpa_supplicant wget rsync mesa vulkan-intel brightnessctl neofetch
+$ sudo pacman -S xorg xorg-apps xorg-xinit xorg-xlsfonts xdotool xclip xsel dbus intel-ucode fuse2 lshw powertop inxi acpi base-devel git bash-completion iw wpa_supplicant wget rsync mesa vulkan-intel brightnessctl neofetch cava
 ```
 
 ## install AUR
@@ -53,13 +53,13 @@ $ yay -S ttf-ms-fonts swayfx
 Recommended to install sway from AUR (yay). Swayfx has better handling and effect than sway original.
 
 ```sh
-$ yay -S swayfx
+$ yay -S swayfx wlogout
 ```
 
 Then install the rest package of what sway needed.
 
 ```sh
-$ pacman -S waybar swaybg grim slurp wl-clipboard wofi mako jq 
+$ pacman -S waybar grim slurp wl-clipboard mako jq swww fuzzel
 ```
 
 ## fonts
