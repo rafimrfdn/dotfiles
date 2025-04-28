@@ -9,9 +9,10 @@
 
 environment {
     QT_QPA_PLATFORM "wayland" // so we can run QT based app like KDE, KeepassXC, etc
-    // DISPLAY ":0" // your display
+    DISPLAY ":0" // your display | for vscodium
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_ENABLE_HIGHDPI_SCALING "1"
+    WAYLAND_DISPLAY "WAYLAND-1"
 }
 
 input {
@@ -261,6 +262,7 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
+spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "bash" "-c" "swaybg -i ~/Pictures/wp/1.jpg"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -330,6 +332,11 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+// disable keybind/hotkey hint at startup
+hotkey-overlay {
+    skip-at-startup
 }
 
 binds {
