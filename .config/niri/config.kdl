@@ -12,7 +12,6 @@ environment {
     DISPLAY ":0" // your display | for vscodium
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_ENABLE_HIGHDPI_SCALING "1"
-    WAYLAND_DISPLAY "WAYLAND-1"
 }
 
 input {
