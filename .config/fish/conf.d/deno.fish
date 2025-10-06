@@ -1,0 +1,1 @@
+source "/home/cachy/.deno/env.fish"

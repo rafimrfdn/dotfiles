@@ -8,7 +8,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 set $mod Mod4
 set $alt Mod1
 
-set $term kitty
+set $term alacritty
 # set $menu rofi -show drun -I
 # set $menu wofi --show drun -I
 set $menu fuzzel
@@ -21,7 +21,7 @@ set $right l
 bindsym $mod+Shift+Return exec $term
 
 bindsym $mod+W exec firefox
-bindsym $mod+E exec nautilus
+bindsym $mod+E exec thunar
 bindsym $mod+P exec wofi --show run
 # bindsym $mod+Shift+E exec emacs
 bindsym $mod+D exec $menu
@@ -31,21 +31,22 @@ bindsym $mod+Shift+Q exec wlogout
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+e reload
 bindsym $alt+F4 kill
-bindsym $mod+N exec kitty -e ~/.scripts/notetaker.sh
+bindsym $mod+N exec alacritty -e ~/.scripts/notetaker.sh
 bindsym $mod+Z exec ~/.scripts/setrandombg.sh
 # bindsym $mod+Z exec ~/.scripts/background-swap.sh
 
 
-# new config from example swayfx
+
 smart_corner_radius on
 corner_radius 10
-default_dim_inactive 0.05
-blur enable
-blur_passes 2
-blur_radius 2
-layer_effects "waybar" "blur enable"; shadows enable
-shadows on
-shadow_blur_radius 20
+default_dim_inactive 0
+# default_dim_inactive 0.05
+# blur enable
+# blur_passes 2
+# blur_radius 2
+# layer_effects "waybar" "blur enable"; shadows enable
+# shadows on
+# shadow_blur_radius 20
 
 
 # font pango:monospace 8.000000
@@ -140,7 +141,7 @@ gaps outer 0
 smart_borders on
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
 exec nm-applet
-exec blueman-applet
+# exec blueman-applet
 exec swww-daemon
 
 # exec "/nix/store/ldpr2fzzk97pzml87z7lmvhqg7pp65lf-dbus-1.14.10/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL XCURSOR_THEME XCURSOR_SIZE; systemctl --user reset-failed && systemctl --user start sway-session.target && swaymsg -mt subscribe '[]' || true && systemctl --user stop sway-session.target"

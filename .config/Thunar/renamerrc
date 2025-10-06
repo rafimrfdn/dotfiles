@@ -1,0 +1,13 @@
+[Configuration]
+LastActiveMode=THUNAR_RENAMER_MODE_EXTENSION
+LastActiveRenamer=ThunarSbrCaseRenamer
+
+[ThunarSbrNumberRenamer]
+TextMode=THUNAR_SBR_TEXT_MODE_TN
+Text=DSC08
+Mode=THUNAR_SBR_NUMBER_MODE_001002003
+Start=100
+
+[ThunarSbrCaseRenamer]
+Mode=THUNAR_SBR_CASE_RENAMER_MODE_UPPER
+

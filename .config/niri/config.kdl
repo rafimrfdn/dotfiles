@@ -375,16 +375,17 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Shift+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
+    Mod+Shift+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
     // Mod+Shift+Return { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
-    Mod+W { spawn "chromium"; } //ozone-platform is for electron based app (chromium, vscode, etc), except you have set it on environment
-    Mod+E { spawn "nautilus"; }
+    // Mod+W { spawn "chromium"; } //ozone-platform is for electron based app (chromium, vscode, etc), except you have set it on environment
+    Mod+W { spawn "firefox"; } 
+    Mod+E { spawn "thunar"; }
     // Super+Alt+L { spawn "swaylock"; }
     Mod+Z { spawn "bash" "-c" "~/.scripts/setrandombg.sh" ; }
-    Mod+N { spawn "kitty" "-e" "/home/arch/.scripts/notetaker.sh" ; }
+    Mod+N { spawn "alacritty" "-e" "/home/cachy/.scripts/notetaker.sh" ; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -398,8 +399,10 @@ binds {
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
     // Monitor brightness
-    XF86MonBrightnessDown { spawn "brightnessctl" "set" "2-"; }
-    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+2"; }
+    // XF86MonBrightnessDown { spawn "brightnessctl" "set" "5-"; }
+    // XF86MonBrightnessUp { spawn "brightnessctl" "set" "+5"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
