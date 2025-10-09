@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Start swww daemon if not running
 pgrep -x swww || swww-daemon
@@ -7,4 +7,4 @@ pgrep -x swww || swww-daemon
 WALLPAPER=$(find ~/Pictures/wp -type f | shuf -n 1)
 
 # Set the image with a smooth transition
-swww img "$WALLPAPER" --transition-type any --transition-duration 2
+swww img "$WALLPAPER" --transition-type any --transition-duration 2 --no-resize
