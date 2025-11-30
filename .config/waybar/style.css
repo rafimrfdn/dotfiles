@@ -2,7 +2,7 @@
     border:        none;
     border-radius: 0;
     font-family:   "Source Sans Pro", "FontAwesome 6 Free";
-    font-size:     15px;
+    font-size:     12px;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
@@ -81,5 +81,9 @@ window#waybar.solo {
 }
 
 #bluetooth.connected {
+    color: rgba(115, 186, 37, 1);
+}
+
+#custom-launcher{
     color: rgba(115, 186, 37, 1);
 }

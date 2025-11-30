@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GIMP (AppImage)
+Comment=Photo editor
+Exec=/home/guest/Appimage/GIMP-3.0.6-x86_64.AppImage
+Icon=/home/guest/.local/share/applications/gimp-icon.png
+Terminal=false
+Categories=Photo;Editor
+StartupNotify=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Darktable (AppImage)
+Comment=Raw Photo editor
+Exec=/home/guest/Appimage/Darktable-5.2.1-x86_64.AppImage
+Icon=/home/guest/.local/share/applications/Darktable_icon.svg.png
+Terminal=false
+Categories=Photo;Editor
+StartupNotify=true

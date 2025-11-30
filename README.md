@@ -1,4 +1,3 @@
-# Opensuse dotfiles 
+# Porteux dotfiles
 
-I run niri on my Thinkpad P50.
-
+I run sway on Porteux Gnome 49.1 on my Thinkpad P50.

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Helium (AppImage)
+Comment=Launch Helium browser (AppImage)
+Exec=/home/guest/Appimage/helium.AppImage
+#Icon=/full/path/to/icon.png
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
