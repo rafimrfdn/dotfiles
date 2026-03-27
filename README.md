@@ -15,8 +15,6 @@ Add RPM FUSION and Non FREE repo
 To enable the Free repository, use:
 
 ```
-```
-```
 $ sudo dnf install \
 https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 ```
@@ -67,7 +65,9 @@ To install it, just add [terra repo](https://terrapkg.com/) to fedora
 
 also install noctalia-shell, it is already available since we add Terra repo.
 
+
 ## FONTS
 
 Mono : Monaspace Neon
+
 Sans : SF Pro Display
