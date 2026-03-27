@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "451168851e8e2466bc97ee3e026c3dcb9141ce07",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "mason-lspconfig.nvim": {
+      "rev": "a979821a975897b88493843301950c456a725982",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.pick": {
+      "rev": "fe079c2bd894a5ee70b62f23d819620ef40c4949",
+      "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "nvim-treesitter": {
+      "rev": "6620ae1c44dfa8623b22d0cbf873a9e8d073b849",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "oil.nvim": {
+      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "src": "https://github.com/stevearc/oil.nvim"
+    }
+  }
+}

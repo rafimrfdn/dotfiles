@@ -1,0 +1,35 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Wed Mar 25 06:07:29 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=7edcae04-6a9e-40d8-xxxx / ext4 defaults 1 1
+UUID=B070-xxxx /boot/efi vfat umask=0077,shortname=winnt 0 2
+
+# /dev/sda5 - NTFS DATA
+#UUID=01DCBCB43F61xxxx  /mnt/windata  ntfs-3g  defaults,nofail,uid=1000,gid=1000,umask=000  0  0
+#UUID=01DCBCB43F61xxxx  /mnt/windata  ntfs-3g  defaults,nofail,uid=1000,gid=1000,umask=000,x-gvfs-hide  0  0
+
+#/mnt/windata/Documents 		/home/fedora/Documents 	none 	bind 		0   0
+#/mnt/windata/Downloads		/home/fedora/Downloads 	none 	bind 		0   0
+#/mnt/windata/Pictures 		/home/fedora/Pictures 	none 	bind 		0   0
+#/mnt/windata/Videos  		/home/fedora/Videos 	none 	bind 		0   0
+#/mnt/windata/Project 		/home/fedora/Projects 	none 	bind 		0   0
+
+
+# UUID=01DCBCB43F61xxxx  /srv/windata  ntfs-3g  defaults,nofail,uid=1000,gid=1000,umask=000,x-gvfs-hide,noauto,x-systemd.automount  0  0
+
+# /srv/windata/Documents   /home/fedora/Documents   none  bind  0  0
+# /srv/windata/Downloads   /home/fedora/Downloads   none  bind  0  0
+# /srv/windata/Pictures    /home/fedora/Pictures    none  bind  0  0
+# /srv/windata/Videos      /home/fedora/Videos      none  bind  0  0
+
+UUID=01DCBCB43F61xxxx  /srv/windata  ntfs-3g  defaults,nofail,uid=1000,gid=1000,umask=000,x-gvfs-hide  0  0
+/dev/disk/by-uuid/01DCBCB3DFFxxxx /mnt/01DCBCB3DFFxxxx auto nosuid,nodev,nofail,noauto 0 0
+/dev/disk/by-uuid/4A5F-xxxx /mnt/4A5F-xxxx auto nosuid,nodev,nofail,noauto 0 0
