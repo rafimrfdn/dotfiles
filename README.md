@@ -1,10 +1,11 @@
 hello, this is my FEDORA WORKSTATION in 2026 on my new thinkpad X13
 
-in this repo I use MangoWC
+in this repo I use MangoWC with Noctalia shell
 
 not many config because all can be done by clicking by GUI.
 
-![fedora 49](./fedora-gnome-49.5.png)
+![fedora 43](./fedora-gnome-49.5.png)
+![fedora mangowc noctalia](./fedora-mangowc-noctalia.png)
 ![fedora terminal](./fedora-gnome-terminal-ptyxis.png)
 
 ## Post Install
@@ -39,7 +40,7 @@ sudo dnf install ffmpeg-free ffmpeg --allowerasing
 ```
 
 
-install another software
+## install another software:
 
 ```
 
@@ -62,4 +63,11 @@ I can't life without Nautilus
 
 I have try so many window managers, but MangoWC is the best so far. Clean, light, has many features and minimalist.
 
+To install it, just add [terra repo](https://terrapkg.com/) to fedora 
 
+also install noctalia-shell, it is already available since we add Terra repo.
+
+## FONTS
+
+Mono : Monaspace Neon
+Sans : SF Pro Display
