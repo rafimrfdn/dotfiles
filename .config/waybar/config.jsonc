@@ -17,7 +17,7 @@
         "format": "{index} {icon}",
         "format-icons": {
             "urgent": "",
-            "focused": "",
+            "focused": "",
             "default": ""
         }
     },
@@ -27,7 +27,7 @@
         "format": "{index} {icon}",
         "format-icons": {
             "urgent": "",
-            "focused": "",
+            "focused": "",
             "default": ""
         }
     },
@@ -86,7 +86,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": " {:%b %d %Y %R}",
+        // "format": " {:%b %d %Y %R}",
+        // "format-alt": "{:%a %d %b w:%V %H:%M}",
+        "format": "  {:%d   %R} ",
         "format-alt": "{:%a %d %b w:%V %H:%M}",
         "tooltip-format": "<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
         "calendar": {
@@ -126,7 +128,7 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": ["", ""]
     },
     "battery": {
         "states": {
@@ -149,7 +151,8 @@
         "format-ethernet": "",
         "format-linked": "",
         "format-disconnected": "⚠",
-        "format-alt": "{ifname} {essid} ({signalStrength}%)"
+        "format-alt": "{ifname} {essid} ({signalStrength}%)",
+				"on-click-right": "exec alacritty -e sh -c 'nmtui'"
     },
     "bluetooth": {
 	"format": "",
