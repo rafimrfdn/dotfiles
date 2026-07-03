@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "dwl/window#layout",
         "ext/workspaces",
         "sway/workspaces",
         "sway/mode",
@@ -34,6 +35,30 @@
      "dwl/window": {
         "format": "{title}",
         // "max-length": 50
+    },
+    "dwl/window#layout": {
+        "icon-size": 20,
+        "icon": false,
+        "format": "{layout}",
+        "max-length": 30,
+        "rewrite": {
+            "S": "Scroller",
+            "T": "Tile",
+            "G": "Grid",
+            "DW": "Dwindle",
+            "M": "Monocle",
+            "K": "Deck",
+            "CT": "Center Tile",
+            "RT": "Right Tile",
+            "VS": "Scroller vertical",
+            "VT": "Tile vertical",
+            "VG": "Grid vertical",
+            "VM": "Monocle vertical",
+            "VK": "Deck vertical",
+            "TG": "Tile Grid",
+            "F": "Fair",
+            "VF": "Vertical Fair"
+          }
     },
     "ext/workspaces": {
       "format": "{icon}",
@@ -239,3 +264,4 @@
 		}
     }
 }
+
