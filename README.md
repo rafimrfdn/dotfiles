@@ -21,7 +21,7 @@ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fed
 
 Optionally, enable the Nonfree repository:
 
-```    
+```
 
 $ sudo dnf install \
 https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -42,7 +42,7 @@ sudo dnf install ffmpeg-free ffmpeg --allowerasing
 
 ```
 
-sudo dnf install chromium btop gimp kdenlive darktable gparted gnome-tweaks
+sudo dnf install chromium btop gimp kdenlive darktable gparted gnome-tweaks adw-gtk3-theme nwg-look
 ```
 
 ## Terminal
@@ -61,7 +61,7 @@ I can't life without Nautilus
 
 I have try so many window managers, but MangoWC is the best so far. Clean, light, has many features and minimalist.
 
-To install it, just add [terra repo](https://terrapkg.com/) to fedora 
+To install it, just add [terra repo](https://terrapkg.com/) to fedora
 
 also install noctalia-shell, it is already available since we add Terra repo.
 
@@ -70,4 +70,4 @@ also install noctalia-shell, it is already available since we add Terra repo.
 
 Mono : Monaspace Neon
 
-Sans : SF Pro Display
+Sans : SF Pro Display / Adwaita Sans

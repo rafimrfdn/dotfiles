@@ -1,0 +1,106 @@
+// mangobar config (JSONC).
+{
+    "layer": "top",
+    "height": 30,
+    "buffer-scale": 1,
+    // "scroll-interval": 100,
+    // "smooth-scrolling-threshold": 5.0,
+
+    "modules-left": [
+        "workspaces",
+        "layout",
+        "window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "hideclients",
+        "network",
+        // "keymode",
+        // "keyboardlayout",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock#date",
+        // "clock#time",
+        "tray",
+        "custom/power"
+    ],
+
+    "workspaces": {
+        "hide-empty": true,
+        // "pinned": [1, 2],
+        // "tag-names": ["1", "2", "3", "编", "网"],
+        "overview-label": "OVERVIEW",
+        "on-click": "activate",
+        "on-click-right": "toggle"
+    },
+    "layout": {
+        "format": "{}"
+    },
+    "window": {
+        "format": "{}",
+        "on-click": "bash ~/.config/mango/scripts/screenshot.sh",
+        "on-click-right": "python /home/wrq/tool/ocr.py"
+    },
+
+    "network": {
+        "format": "󰈀 {ifname}",
+        "format-alt": "↓{down} ↑{up}"
+    },
+    "hideclients": {
+        "format": " {}"
+    },
+    "cpu": {
+        "format": " {load}%"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟"],
+        "on-scroll-up": "brightnessctl -q set +5%",
+        "on-scroll-down": "brightnessctl -q set 5%-",
+        "on-click": "brightnessctl set 1%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {bt}",
+        "format-muted": "󰝟 {volume}% {bt}",
+        "icons": ["󰝟", "󰕿", "󰕾"],
+        // "icon-bluetooth": "󰂯",
+        // "on-click": "pamixer -t",
+        // "on-scroll-up": "pamixer -i 2",
+        // "on-scroll-down": "pamixer -d 2"
+
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume 0 +2%",
+        "on-scroll-down": "pactl set-sink-volume 0 -2%"
+    },
+    "battery": {
+        "format": "{icon} {percent}% {ac}",
+        "icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        // "icon-charging": "󰂄",
+        // "icon-full": "󰁹",
+        // "icon-ac": "",
+        // "hide-on-ac": true
+    },
+    "clock#date": {
+        "format": " {:L%b%d·%A}",
+        "format-alt": " {:L%H:%M}"
+    },
+    // "clock#time": {
+    //     "format": " {:L%H:%M}"
+    // },
+    "tray": {
+        // "icon-size": 25,
+        // "spacing": 10
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout -C ~/.config/wlogout/style.css -l ~/.config/wlogout/layout -b 6 --protocol layer-shell",
+        "on-click-right": "sleep 0.1s && swaync-client -t -sw"
+    }
+}

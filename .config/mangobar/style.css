@@ -1,0 +1,144 @@
+/* =========================================================
+ * mangobar style (only modules/properties this bar supports)
+ *
+ * Modules: bar / tags / layout / title / overview /
+ *          clock / cpu / mem / brightness / volume /
+ *          network / keymode / keyboardlayout / tray / custom-<name>
+ * Tag states: tags.active / tags.occupied / tags.urgent / tags.empty
+ * Properties: color / background / padding / margin / border-radius /
+ *             min-width / font-family / font-size / font-weight
+ * ========================================================= */
+
+/* ==================== Font ==================== */
+/* font-family / font-size / font-weight.
+ * The config.jsonc "font" value is the fallback when CSS sets no font. */
+* {
+    /* font-family: "Maple Mono NF CN"; */
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+* {
+    color: #ebdbb2;
+    background-color: #504945;
+    padding: 0px 10px;
+    margin: 5px 1px;
+    border-radius: 100px;
+}
+
+#bar {
+    background: none;
+    margin: 5px 10px;
+}
+#bar.sel {
+    background: none;
+}
+
+#tags {
+    padding: 0px 13px;
+    margin: 0px 2px;
+}
+
+#tags.active {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+#tags.occupied {
+    background-color: #504945;
+    color: #ebdbb2;
+}
+#tags.urgent {
+    background-color: #fb4934;
+    color: #1b1a1a;
+}
+#tags.empty {
+    background-color: #201b14;
+    color: #ebdbb2;
+}
+
+/* Overview mode */
+#overview {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+
+/* Layout symbol */
+#layout {
+    background-color: #bd788a;
+    color: #111111;
+    min-width: 34px;
+    margin: 5px 5px;
+}
+
+/* Window title */
+#title {
+    background-color: #bd788a;
+    color: #111111;
+}
+
+/* Right-side system modules */
+#clock {
+    background-color: #c4b595;
+    color: #1b1a1a;
+}
+/* Date module (clock#date), separate from time */
+#clock.date {
+    background-color: #b8bb26;
+    color: #1b1a1a;
+}
+#cpu {
+    padding: 0px 15px;
+    background-color: #c4b595;
+    color: #1b1a1a;
+}
+#mem {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+#brightness {
+    background-color: #d3869b;
+    color: #1b1a1a;
+}
+#volume {
+    background-color: #d19e27;
+    color: #1b1a1a;
+}
+#network {
+    background-color: #b8bb26;
+    color: #1b1a1a;
+}
+#keymode {
+    background-color: #83a598;
+    color: #1b1a1a;
+}
+#keyboardlayout {
+    background-color: #bd788a;
+    color: #1b1a1a;
+}
+
+/* Custom modules use #custom-<name> (e.g. custom/power -> #custom-power) */
+#custom-power {
+    margin: 0px 5px;
+    background-color: #90AD9D;
+    color: #000000;
+}
+
+#tray {
+    background-color: #6B645A;
+    padding: 0px 15px;
+}
+
+menu {
+    background-color: #201B14;
+    border-color: #ebdbb2;
+    border-radius: 10px;
+    font-size: 14px;
+}
+menuitem {
+    color: #ebdbb2;
+}
+menuitem:hover {
+    color: #1b1a1a;
+    background-color: #b8bb26;
+}
